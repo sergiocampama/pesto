@@ -14,7 +14,7 @@
 
 def _resolver_rule_impl(repository_ctx):
     """Repository rule implementation that invokes dependency resolver."""
-    spec_path = repository_ctx.path(repository_ctx.attr._main_spec_file)
+    spec_path = repository_ctx.path(repository_ctx.attr._spec_file)
     resolver_path = repository_ctx.path(repository_ctx.attr._resolver_script)
 
     # Create a BUILD file next to where the bzl files are created, to
@@ -31,9 +31,9 @@ def _resolver_rule_impl(repository_ctx):
 _resolver_rule = repository_rule(
     implementation = _resolver_rule_impl,
     attrs = {
-        "_main_spec_file": attr.label(
+        "_spec_file": attr.label(
             allow_single_file = True,
-            default = Label("@//:bazel_spec.json")
+            default = Label("@//:pesto.json")
         ),
         "_resolver_script": attr.label(
             allow_single_file = True,
