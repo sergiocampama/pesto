@@ -73,16 +73,6 @@ Local dependencies override any remote dependency. Local dependencies can only b
 root manifest file (i.e. the manifest file of the workspace where Bazel is being run). These are
 mostly used for development or debugging purposes.
 
-## Missing Features
-
-Pesto is currently functional for basic dependency graphs. Missing features are:
-
-1. Proper version resolution that takes into account requested version ranges and available versions
-   from the remote dependencies.
-1. More flexibility in specifying dependency versions (e.g. `up_to_next_minor`, `up_to_next_major`,
-   `exact`, `revision`)
-1. Validation and error handling in many levels.
-
 ## Example
 
 Check out the [Pesto Sample Project](https://github.com/sergiocampama/pesto_sample_project) for
