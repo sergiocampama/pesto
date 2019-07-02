@@ -19,7 +19,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "pesto",
-    remote = "https://agrydeveloper:whyareyoulikethis@github.com/sergiocampama/pesto",
+    remote = "https://github.com/sergiocampama/pesto",
     tag = "0.0.1",
 )
 
